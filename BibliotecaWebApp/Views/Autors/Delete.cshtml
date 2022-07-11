@@ -1,0 +1,27 @@
+﻿@model Autor
+
+<form method="post" asp-action="DeletePOST">
+	<input asp-for="Id" hidden />
+	<div class="border p-3 mt-4">
+		<div class="row pb-2">
+			<h2 class="text-primary">Apagar Autor</h2>
+			<hr />
+		</div>
+		
+		<div class="mb-3">
+			<label asp-for="Nome"></label>
+			<input asp-for="Nome" disabled class="form-control" />
+		</div>
+		
+		<button type="submit" class="btn btn-danger" style="width:150px">Apagar</button>
+		<a asp-controller="Autors" asp-action="Index" class="btn btn-secondary" style="width:150px">
+			Voltar Lista
+		</a>
+	</div>
+</form>
+
+@section Scripts{
+	@{
+		<partial name="_ValidationScriptsPartial" />
+	}
+}
